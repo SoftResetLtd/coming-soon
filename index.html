@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soft Reset</title>
+<meta name="description" content="Soft Reset. A new British brand. Coming soon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://softreset.uk/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Soft Reset">
+<meta property="og:title" content="Soft Reset">
+<meta property="og:description" content="A new British brand. Coming soon.">
+<meta property="og:url" content="https://softreset.uk/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FAF7F2'/%3E%3Cpath d='M16 7c.5 4.2 1.3 5 5.5 5.5-4.2.5-5 1.3-5.5 5.5-.5-4.2-1.3-5-5.5-5.5 4.2-.5 5-1.3 5.5-5.5z' fill='%236B9DC9'/%3E%3Cpath d='M22.5 19c.25 2.1.65 2.5 2.75 2.75-2.1.25-2.5.65-2.75 2.75-.25-2.1-.65-2.5-2.75-2.75 2.1-.25 2.5-.65 2.75-2.75z' fill='%23C9B79A'/%3E%3C/svg%3E">
+
+<style>
+:root{
+  --bg:#FAF7F2;
+  --ink:#1B1A18;
+  --muted:#6E6A63;
+  --hair:#E4DED4;
+  --accent:#6B9DC9;
+  --warm:#C9B79A;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#131211;
+    --ink:#F2EEE7;
+    --muted:#9A948B;
+    --hair:#2C2A27;
+    --accent:#8FBBE2;
+    --warm:#B9A88C;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter","Helvetica Neue",Arial,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+}
+
+.wrap{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:clamp(2rem,7vw,5rem) 1.5rem;
+  position:relative;
+}
+
+/* the quiet cute bit: three drifting sparkles */
+.sparkles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.sp{position:absolute;opacity:0;animation:drift 14s ease-in-out infinite}
+.sp svg{display:block}
+.sp1{top:24%;left:16%;animation-delay:0s}
+.sp2{top:66%;left:79%;animation-delay:4.6s}
+.sp3{top:38%;left:88%;animation-delay:9.2s}
+@keyframes drift{
+  0%{opacity:0;transform:translateY(6px) scale(.9)}
+  18%{opacity:.85;transform:translateY(0) scale(1)}
+  46%{opacity:.85;transform:translateY(-4px) scale(1)}
+  70%{opacity:0;transform:translateY(-10px) scale(.92)}
+  100%{opacity:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .sp{animation:none;opacity:.55}
+}
+@media (max-width:600px){ .sp3{display:none} }
+
+.mark{
+  font-size:clamp(1.9rem,7.5vw,3.4rem);
+  font-weight:600;
+  letter-spacing:.24em;
+  text-indent:.24em;
+  line-height:1.1;
+  margin-bottom:clamp(1.2rem,3.2vw,1.75rem);
+}
+
+.rule{
+  width:clamp(40px,8vw,64px);
+  height:1px;
+  background:var(--warm);
+  margin:0 auto clamp(1.2rem,3.2vw,1.75rem);
+  border:0;
+}
+
+.soon{
+  font-size:clamp(.8125rem,2.2vw,.9375rem);
+  font-weight:400;
+  color:var(--muted);
+  letter-spacing:.22em;
+  text-indent:.22em;
+  text-transform:uppercase;
+}
+
+footer{
+  border-top:1px solid var(--hair);
+  padding:1.6rem 1.5rem 2rem;
+  text-align:center;
+  font-size:.8125rem;
+  line-height:1.7;
+  color:var(--muted);
+  letter-spacing:.02em;
+}
+footer .sep{opacity:.45;padding:0 .45rem}
+@media (max-width:520px){
+  footer .sep{display:none}
+  footer span{display:block}
+}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="sparkles" aria-hidden="true">
+    <div class="sp sp1">
+      <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 1c.9 7.4 2.7 9.2 10.1 10.1C14.7 12 12.9 13.8 12 21.2 11.1 13.8 9.3 12 1.9 11.1 9.3 10.2 11.1 8.4 12 1z" fill="#6B9DC9" opacity=".55"/></svg>
+    </div>
+    <div class="sp sp2">
+      <svg width="11" height="11" viewBox="0 0 24 24"><path d="M12 1c.9 7.4 2.7 9.2 10.1 10.1C14.7 12 12.9 13.8 12 21.2 11.1 13.8 9.3 12 1.9 11.1 9.3 10.2 11.1 8.4 12 1z" fill="#C9B79A" opacity=".6"/></svg>
+    </div>
+    <div class="sp sp3">
+      <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 1c.9 7.4 2.7 9.2 10.1 10.1C14.7 12 12.9 13.8 12 21.2 11.1 13.8 9.3 12 1.9 11.1 9.3 10.2 11.1 8.4 12 1z" fill="#6B9DC9" opacity=".4"/></svg>
+    </div>
+  </div>
+
+  <h1 class="mark">SOFT RESET</h1>
+  <hr class="rule">
+  <p class="soon">Coming Soon</p>
+</main>
+
+<footer>
+  <span>Soft Reset Ltd</span><span class="sep">·</span><span>Registered in England &amp; Wales</span><span class="sep">·</span><span>Company No. 17240610</span>
+</footer>
+
+</body>
+</html>

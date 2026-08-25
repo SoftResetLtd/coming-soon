@@ -63,24 +63,13 @@ body{
   position:relative;
 }
 
-/* the quiet cute bit: three drifting sparkles */
-.sparkles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-.sp{position:absolute;opacity:0;animation:drift 14s ease-in-out infinite}
-.sp svg{display:block}
-.sp1{top:24%;left:16%;animation-delay:0s}
-.sp2{top:66%;left:79%;animation-delay:4.6s}
-.sp3{top:38%;left:88%;animation-delay:9.2s}
-@keyframes drift{
-  0%{opacity:0;transform:translateY(6px) scale(.9)}
-  18%{opacity:.85;transform:translateY(0) scale(1)}
-  46%{opacity:.85;transform:translateY(-4px) scale(1)}
-  70%{opacity:0;transform:translateY(-10px) scale(.92)}
-  100%{opacity:0}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(6px)}
+  to{opacity:1;transform:translateY(0)}
 }
 @media (prefers-reduced-motion:reduce){
-  .sp{animation:none;opacity:.55}
+  .mark,.rule,.soon{animation:none!important;opacity:1!important;transform:none!important}
 }
-@media (max-width:600px){ .sp3{display:none} }
 
 .mark{
   font-size:clamp(1.9rem,7.5vw,3.4rem);
@@ -89,6 +78,8 @@ body{
   text-indent:.24em;
   line-height:1.1;
   margin-bottom:clamp(1.2rem,3.2vw,1.75rem);
+  opacity:0;
+  animation:fadeIn 1.1s ease-out .1s forwards;
 }
 
 .rule{
@@ -97,6 +88,8 @@ body{
   background:var(--warm);
   margin:0 auto clamp(1.2rem,3.2vw,1.75rem);
   border:0;
+  opacity:0;
+  animation:fadeIn .9s ease-out .5s forwards;
 }
 
 .soon{
@@ -106,6 +99,8 @@ body{
   letter-spacing:.22em;
   text-indent:.22em;
   text-transform:uppercase;
+  opacity:0;
+  animation:fadeIn 1.1s ease-out .7s forwards;
 }
 
 footer{
@@ -127,25 +122,13 @@ footer .sep{opacity:.45;padding:0 .45rem}
 <body>
 
 <main class="wrap">
-  <div class="sparkles" aria-hidden="true">
-    <div class="sp sp1">
-      <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 1c.9 7.4 2.7 9.2 10.1 10.1C14.7 12 12.9 13.8 12 21.2 11.1 13.8 9.3 12 1.9 11.1 9.3 10.2 11.1 8.4 12 1z" fill="#6B9DC9" opacity=".55"/></svg>
-    </div>
-    <div class="sp sp2">
-      <svg width="11" height="11" viewBox="0 0 24 24"><path d="M12 1c.9 7.4 2.7 9.2 10.1 10.1C14.7 12 12.9 13.8 12 21.2 11.1 13.8 9.3 12 1.9 11.1 9.3 10.2 11.1 8.4 12 1z" fill="#C9B79A" opacity=".6"/></svg>
-    </div>
-    <div class="sp sp3">
-      <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 1c.9 7.4 2.7 9.2 10.1 10.1C14.7 12 12.9 13.8 12 21.2 11.1 13.8 9.3 12 1.9 11.1 9.3 10.2 11.1 8.4 12 1z" fill="#6B9DC9" opacity=".4"/></svg>
-    </div>
-  </div>
-
   <h1 class="mark">SOFT RESET</h1>
   <hr class="rule">
   <p class="soon">Coming Soon</p>
 </main>
 
 <footer>
-  <span>Soft Reset Ltd</span><span class="sep">·</span><span>Registered in England &amp; Wales</span><span class="sep">·</span><span>Company No. 17240610</span>
+  <span>Soft Reset Ltd</span><span class="sep">·</span><span>Registered in England &amp; Wales</span>
 </footer>
 
 </body>
